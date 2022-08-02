@@ -1,9 +1,8 @@
-package com.examen.examenEnLigne.repo;
+package com.exam.examInLine.repo;
 
+import com.exam.examInLine.model.Role;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-
-import com.examen.examenEnLigne.model.Role;
 
 @Repository
 public interface RoleRepository extends JpaRepository<Role, Long> {

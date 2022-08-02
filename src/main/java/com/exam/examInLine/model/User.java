@@ -1,15 +1,21 @@
-package com.examen.examenEnLigne.model;
+package com.exam.examInLine.model;
 
+import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
 
 import javax.persistence.*;
 
+import org.springframework.security.core.GrantedAuthority;
+
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import org.springframework.security.core.userdetails.UserDetails;
 
 @Entity
 @Table(name = "users")
-public class User {
+public class User implements UserDetails {
+	//implements UserDetails
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	
@@ -49,6 +55,7 @@ public class User {
 	public void setUsername(String username) {
 		this.username = username;
 	}
+
 	public String getPassword() {
 		return password;
 	}
@@ -117,10 +124,42 @@ public class User {
 				+ ", lastName=" + lastName + ", email=" + email + ", phone=" + phone + ", enabled=" + enabled
 				+ ", profile=" + profile + ", userRoles=" + userRoles + "]";
 	}
+	
 	public User() {
 		super();
 	}
-	
-	
+
+
+    @Override
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+
+        Set<Authority> set = new HashSet<>();
+
+        this.userRoles.forEach(userRole -> {
+            set.add(new Authority(userRole.getRole().getRoleName()));
+        });
+        return set;
+    }
+
+
+    @Override
+    public boolean isAccountNonExpired() {
+        return true;
+    }
+
+    @Override
+    public boolean isAccountNonLocked() {
+        return true;
+    }
+
+    @Override
+    public boolean isCredentialsNonExpired() {
+        return true;
+    }
+
+    @Override
+    public boolean isEnabled() {
+        return true;
+    }
 
 }

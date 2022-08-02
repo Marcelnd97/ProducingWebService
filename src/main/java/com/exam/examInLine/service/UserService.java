@@ -1,9 +1,9 @@
-package com.examen.examenEnLigne.service;
+package com.exam.examInLine.service;
 
 import java.util.Set;
 
-import com.examen.examenEnLigne.model.User;
-import com.examen.examenEnLigne.model.UserRole;
+import com.exam.examInLine.model.User;
+import com.exam.examInLine.model.UserRole;
 
 public interface UserService {
 

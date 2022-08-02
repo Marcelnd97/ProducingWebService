@@ -1,4 +1,4 @@
-package com.examen.examenEnLigne.model;
+package com.exam.examInLine.model;
 
 import java.util.HashSet;
 import java.util.Set;

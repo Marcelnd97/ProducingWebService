@@ -1,14 +1,15 @@
-package com.examen.examenEnLigne.service;
+package com.exam.examInLine.service;
 
 import java.util.Set;
 
+import com.exam.examInLine.helper.UserFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.examen.examenEnLigne.model.User;
-import com.examen.examenEnLigne.model.UserRole;
-import com.examen.examenEnLigne.repo.RoleRepository;
-import com.examen.examenEnLigne.repo.UserRepository;
+import com.exam.examInLine.model.User;
+import com.exam.examInLine.model.UserRole;
+import com.exam.examInLine.repo.RoleRepository;
+import com.exam.examInLine.repo.UserRepository;
 
 
 @Service
@@ -30,7 +31,7 @@ public class UserServiceImpl implements UserService {
 		if(local != null)
 		{
 			System.out.println("User is already there !!");
-			throw new Exception("User already present !!");
+			throw new UserFoundException("User already present !!");
 		}else
 		{
 			//créer un utilistateur
