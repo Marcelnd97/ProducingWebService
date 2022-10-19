@@ -11,12 +11,14 @@ public class Quiz {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+
     private Long qId;
     private String title;
+    @Column(length = 5000)
     private String description;
     private String maxMarks;
     private String numberOfQuestions;
-    private boolean active = false;
+    private boolean active = true;
 
     //if add..
 
@@ -28,6 +30,17 @@ public class Quiz {
     private  Set<Question> questions  = new HashSet<>();
 
     public Quiz() {
+    }
+
+    public Quiz(Long qId, String title, String description, String maxMarks, String numberOfQuestions, boolean active, Category category, Set<Question> questions) {
+        this.qId = qId;
+        this.title = title;
+        this.description = description;
+        this.maxMarks = maxMarks;
+        this.numberOfQuestions = numberOfQuestions;
+        this.active = active;
+        this.category = category;
+        this.questions = questions;
     }
 
     public Long getqId() {
@@ -84,5 +97,13 @@ public class Quiz {
 
     public void setCategory(Category category) {
         this.category = category;
+    }
+
+    public Set<Question> getQuestions() {
+        return questions;
+    }
+
+    public void setQuestions(Set<Question> questions) {
+        this.questions = questions;
     }
 }

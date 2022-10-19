@@ -5,13 +5,11 @@ import com.exam.examInLine.helper.UserNotFoundException;
 import com.exam.examInLine.model.JwtRequest;
 import com.exam.examInLine.model.JwtResponse;
 import com.exam.examInLine.model.User;
-import com.exam.examInLine.service.UserDetailsServiceImpl;
+import com.exam.examInLine.service.impl.UserDetailsServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.*;
-import org.springframework.security.core.Authentication;
 import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.security.Principal;

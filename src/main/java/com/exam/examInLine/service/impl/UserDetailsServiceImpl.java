@@ -1,4 +1,4 @@
-package com.exam.examInLine.service;
+package com.exam.examInLine.service.impl;
 
 import com.exam.examInLine.model.User;
 import com.exam.examInLine.repo.UserRepository;

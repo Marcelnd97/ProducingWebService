@@ -1,8 +1,9 @@
-package com.exam.examInLine.service;
+package com.exam.examInLine.service.impl;
 
 import java.util.Set;
 
 import com.exam.examInLine.helper.UserFoundException;
+import com.exam.examInLine.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
