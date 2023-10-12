@@ -6,7 +6,7 @@ on:
 jobs:
   build-deploy:
     name: Build and Deploy Exam in Line Spring Boot Application
-    run-on: ubuntu-latest
+    run-on: windows-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
