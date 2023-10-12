@@ -2,7 +2,7 @@ Name: Build & Deploy String app
 on:
   push:
     branches:
-      -main
+      - ExamenEnLigne
 Jobs:
   build-deploy:
     name: Build and Deploy Exam in Line Spring Boot Application
