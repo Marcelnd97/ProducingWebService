@@ -1,12 +1,9 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="ExamInLine" type="Application" factoryName="Application">
-    <option name="ALTERNATIVE_JRE_PATH" value="C:\Program Files\Java\jdk1.8.0_321\jre" />
+    <option name="ALTERNATIVE_JRE_PATH" value="$PROJECT_DIR$/../../../../../Program Files/Java/jdk-11.0.17" />
     <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-    <envs>
-      <env name="JAVA_HOME" value="C:\Program Files\Java\jdk1.8.0_321" />
-    </envs>
     <option name="MAIN_CLASS_NAME" value="com.exam.examInLine.ExamInLineApplication" />
-    <module name="ExamInLine" />
+    <module name="ExamEnLigne" />
     <option name="PROGRAM_PARAMETERS" value="$Classpath$" />
     <method v="2">
       <option name="Make" enabled="true" />

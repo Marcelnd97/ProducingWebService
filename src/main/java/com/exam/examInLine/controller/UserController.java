@@ -5,7 +5,6 @@ import java.util.Set;
 
 import com.exam.examInLine.helper.ErrorResponse;
 import com.exam.examInLine.helper.UserFoundException;
-import com.exam.examInLine.helper.UserNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

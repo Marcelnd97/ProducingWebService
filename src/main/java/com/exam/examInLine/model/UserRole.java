@@ -24,12 +24,7 @@ public class UserRole {
 	public void setUserRoleId(Long userRoleId) {
 		this.userRoleId = userRoleId;
 	}
-
-	public User getUser() {
-		return user;
-	}
-
-	public void setUser(User user) {
+ {
 		this.user = user;
 	}
 
@@ -37,6 +32,13 @@ public class UserRole {
 		return role;
 	}
 
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user){
+		this.user = user;
+	}
 	public void setRole(Role role) {
 		this.role = role;
 	}
