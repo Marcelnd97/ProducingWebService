@@ -11,12 +11,12 @@ Jobs:
       - name: Checkout Code
         users: actions/checkout@v3
 
-      - name: Setup JDK 17
+      - name: Setup JDK 11
         users: actions/setup-java@3
 
         with:
            distribution: 'correctto'
-           java-version: 17
+           java-version: 11
 
       - name: Unit Tests
         run: mvn -B test --file pom.xml
